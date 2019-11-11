@@ -282,8 +282,8 @@ Add callback function which is called when a image is clicked with the image nam
 
 > **Parameters**
 > - `filename` _(string)_ - The name of the clicked image
-> - `index` _(Number)_ index - The index of the image.
-> - `singleImageData` _{Object}_ singleImageData - The singleImageData of the image.
+> - `index` _(number)_ index - The index of the image.
+> - `singleImageData` _(object)_ singleImageData - The singleImageData of the image.
 > 
 > **Default**
 > function(filename) {}
@@ -299,3 +299,4 @@ Disable the Pig library by removing event listeners set in `Pig.enable()`.
 [download]: https://github.com/schlosser/pig.js/releases/download/v0.2.1/pig.min.js
 [feeding-dan]: https://feeding.schlosser.io/
 [feeding-dan-gh]: https://github.com/schlosser/feeding-dan/
+
