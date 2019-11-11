@@ -144,7 +144,7 @@ var options = {
   urlForSize: function(filename, size) {
     return '/img/' + size + '/' + filename;
   },
-  onClickHander: function(filename) { },
+  onClickHander: function(filename,index,singleImageData) { },
   getMinAspectRatio: function(lastWindowWidth) {
     if (lastWindowWidth <= 640)  // Phones
       return 2;

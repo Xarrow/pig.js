@@ -279,7 +279,7 @@
        *
        * @param {string} filename - The filename of the image.
        */
-       onClickHandler: function(filename) {
+       onClickHandler: function(filename,index,singleImageData) {
        },
 
       /**
@@ -742,6 +742,7 @@
     this.aspectRatio = singleImageData.aspectRatio;  // Aspect Ratio
     this.filename = singleImageData.filename;  // Filename
     this.index = index;  // The index in the list of images
+    this.singleImageData = singleImageData;
 
     // The Pig instance
     this.pig = pig;
@@ -750,6 +751,7 @@
       figure: pig.settings.classPrefix + '-figure',
       thumbnail: pig.settings.classPrefix + '-thumbnail',
       loaded: pig.settings.classPrefix + '-loaded',
+      full: pig.settings.classPrefix + '-full',
     };
 
     return this;
@@ -802,6 +804,7 @@
       if (!this.fullImage) {
         this.fullImage = new Image();
         this.fullImage.src = this.pig.settings.urlForSize(this.filename, this.pig.settings.getImageSize(this.pig.lastWindowWidth));
+        this.fullImage.className = this.classNames.full;
         this.fullImage.onload = function() {
 
           // We have to make sure fullImage still exists, we may have already been
@@ -858,7 +861,7 @@
     if (!this.element) {
       this.element = document.createElement(this.pig.settings.figureTagName);
       this.element.className = this.classNames.figure;
-      this.element.addEventListener("click", function (){ this.pig.settings.onClickHandler(this.filename); }.bind(this) );
+      this.element.addEventListener("click", function (){ this.pig.settings.onClickHandler(this.filename,this.index, this.singleImageData); }.bind(this) );
       this._updateStyles();
     }
 
