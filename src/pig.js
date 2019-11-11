@@ -278,6 +278,8 @@
        * which was clicked.
        *
        * @param {string} filename - The filename of the image.
+       * @param {Number} index - The index of the image.
+       * @param {Object} singleImageData - The singleImageData of the image.
        */
        onClickHandler: function(filename,index,singleImageData) {
        },

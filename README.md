@@ -282,7 +282,9 @@ Add callback function which is called when a image is clicked with the image nam
 
 > **Parameters**
 > - `filename` _(string)_ - The name of the clicked image
->
+> - `index` _(Number)_ index - The index of the image.
+> - `singleImageData` _{Object}_ singleImageData - The singleImageData of the image.
+> 
 > **Default**
 > function(filename) {}
 
